@@ -1,0 +1,148 @@
+Create a Virtual Machine
+
+/
+Azure Administrator Associate 
+/
+Administrator 
+Lab Steps
+Task 1: Sign in to Azure Portal
+Go to the Azure portal by clicking on the  button or by using URL https://portal.azure.com.
+
+Note: It is recommended to use incognito mode to avoid Azure portal cache related issues.
+
+If it automatically logs into any other azure account, please logout of it and clear cache.
+
+Sign in with your given username and password on Azure portal.
+
+If login is not working. Click on   and start the lab again.
+
+Task 2: Create an Azure Virtual Machine
+Click on Create a resource button
+
+
+
+In the search box, enter Virtual Machine.
+
+
+
+Select Create and enter the following values in the Basics tab.
+
+Resource group : Select rg_eastus_XXXXX
+
+Instance details:
+
+Virtual machine name: Enter WhizlabsVM
+
+Region: Select East US
+
+Availability options: Select No infrastructure redundancy required
+
+Security type: Select Standard
+
+Image: Select Windows Server 2019 Datacenter - Gen2
+
+Size: Select Standard_B2s
+
+Administrator account:
+
+Username: Enter vm1
+
+Password: Enter a password
+
+Confirm password: Re-enter the password
+
+Inbound port rules:
+
+Public inbound ports: Select Allow selected ports
+
+Select inbound ports: Select HTTP(80), SSH(22), RDP(3389)
+
+
+
+
+
+Click on the Next: Disks button and select the following:
+
+OS disk type: Select Standard SSD
+
+
+
+Click on the Next: Networking button, leave all values as default and click on the Next: Management button and select following details:
+
+Boot diagnostics: Select Disable
+
+
+
+Click on the Review + Create button and then select Create.
+
+
+
+Task 3: Understand Deployment details
+Click on Deployment details.
+
+
+
+Here we can see that, by the configurations we made while creating the virtual machine, we have deployed a virtual machine with a network interface, virtual network, a public IP address and a network security group.
+
+
+
+Task 4: RDP into the Virtual Machine
+In the search box at the top of Azure Portal, search for Virtual Machines, select WhizlabsVM from the list and click on Connect.
+
+
+
+Select RDP and click on Download RDP File button.
+
+NOTE: If you are a Linux or MAC user:
+
+Download the RDP software and install it.
+
+Once installed, open the software and click on Add PC.
+
+Connect to your virtual machine using its public IP address and click on Add.
+
+Right click and open the PC, Enter username and password in the popup and click on continue on all further popups.
+
+
+
+Open the download RDP file and select Connect on the displayed prompt.
+
+
+
+On the Windows Security prompt, click on more choices.
+
+
+
+Click on Use a different account and enter the username and password you specified while creating the Virtual Machine and select OK.
+
+
+
+You may receive a certificate warning during the sign-in process. Select Yes to continue.
+
+
+
+After successfully logging into the virtual machine, wait until the windows boots up and is ready to use.
+
+If you see this message Do you want to allow your PC to be discoverable by other PCs and devices on this network? Click on Yes
+
+Your Virtual Machine is ready to use
+
+A Server Manager window might open by default
+
+
+
+Completion and Conclusions
+You have successfully logged into Azure Portal
+
+You have successfully created an Azure Virtual Machine
+
+You have successfully understood the Deployment details
+
+You have successfully made an RDP connection into the Virtual Machine
+
+End Lab
+You have successfully completed this lab
+
+Click on Logout in Azure Portal by clicking on the logout button in the top right corner inside Azure Profile
+
+Click on  once you have completed the Lab
